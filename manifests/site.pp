@@ -5,7 +5,7 @@ node 'el71.local' {
   include role::master_server
   file { '/root/README':
     ensure   => file,
-    content  => $fqdn,
+    content  => $os,
   }
 }
 
