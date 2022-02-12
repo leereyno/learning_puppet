@@ -5,16 +5,16 @@ class profile::agent_nodes {
 
   host {'el71.local':
     ensure => present,
-    ip     => 192.168.1.114
+    ip     => '192.168.1.114'
   }
 
   host {'web.puppet.vm':
     ensure => present,
-    ip     => 172.18.0.2
+    ip     => '172.18.0.2'
   }
   host {'db.puppet.vm':
     ensure => present,
-    ip     => 172.18.0.3
+    ip     => '172.18.0.3'
   }
 }
 
