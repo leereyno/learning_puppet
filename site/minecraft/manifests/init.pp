@@ -1,7 +1,9 @@
-class minecraft {
-
-  $url = 'https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar'
+class minecraft 
+  (
+  $url = 'https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar',
   $install_dir = '/opt/minecraft'
+  )
+{
 
   file {$install_dir:
     ensure => directory,
@@ -32,7 +34,6 @@ class minecraft {
     enable  => true,
     require => [Package['java-latest-openjdk'],File["${install_dir}/eula.txt"],File['/etc/systemd/system/minecraft.service']],
   }
-
 
 }
 
